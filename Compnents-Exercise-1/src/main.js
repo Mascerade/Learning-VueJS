@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Servers from './Servers.vue'
-import ServerDetails from './ServerDetails.vue'
-import Footer from './Footer.vue'
-import Header from './Header'
+import Servers from './components/Servers.vue'
+import ServerDetails from './components/ServerDetails.vue'
+import Footer from './components/Footer.vue'
+import Header from './components/Header'
 
 Vue.component('my-servers', Servers)
 Vue.component('my-server-details', ServerDetails)
