@@ -10,11 +10,23 @@
 </template>
 
 <script>
+import {eventBus} from '../main.js'
 export default {
     data: function() {
         return {
-            quotesAdded: 1
+            quotesAdded: 0
         }
+    },
+
+    created() {
+        eventBus.$on("addQuote", (quoteObj) => {
+            if (this.quotesAdded < 10) {
+                this.quotesAdded += 1;
+            }
+        });
+        eventBus.$on('deleteQuote', (quoteId) => {
+            this.quotesAdded -= 1;
+        });
     }
 }
 </script>

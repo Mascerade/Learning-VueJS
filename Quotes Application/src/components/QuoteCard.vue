@@ -1,12 +1,18 @@
 <template>
-    <div class="card col-md-3 text-secondary">
+    <div @click="deleteCard()" class="card col-md-3 text-secondary">
         {{ quoteObj.quote }}        
     </div>
 </template>
 
 <script>
+import {eventBus} from '../main.js'
 export default {
-    props: ['quoteObj']
+    props: ['quoteObj'],
+    methods: {
+        deleteCard() {
+            eventBus.deleteQuote(this.quoteObj.id)
+        }
+    }
 }
 </script>
 
