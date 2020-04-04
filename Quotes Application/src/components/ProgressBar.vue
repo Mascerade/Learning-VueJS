@@ -2,7 +2,7 @@
     <div>
         <h2>Quotes Added</h2>
         <div id="progress-container">
-            <div id="inner-progress" :style="{ width: quotesAdded * 10 + '%' }">
+            <div class="bg-primary" id="inner-progress" :style="{ width: quotesAdded * 10 + '%' }">
                 {{quotesAdded}} / 10
             </div>
         </div>
@@ -22,7 +22,7 @@ export default {
 <style>
     #progress-container {
         width: 100%;
-        height: 20px;
+        height: 23px;
         border-radius: 10px;
         background-color:#f5f5f5;
     }
@@ -31,7 +31,6 @@ export default {
         height: 100%;
         width: 10%;
         border-radius: 10px;
-        background-color:#66b5f2;
         text-align: center;
         color: white;
     }
