@@ -10,6 +10,7 @@
 export default {
     data: function() {
         return {
+            addQuotes: 0,
             userQuote: ""
         }
     }
